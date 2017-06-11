@@ -34,7 +34,7 @@ pip install riot_observer
 
 OR:
 
-``Python
+``
 python setup.py install
 ``
 
@@ -86,7 +86,8 @@ print(creator)
 # create watcher with NA as its default region
 na = RiotObserver('<your-api-key>', default_region=c.NORTH_AMERICA)
 
-# proper way to send names with spaces is to remove them, still works with spaces though (the wrapper includes a sanitize function)
+# proper way to send names with spaces is to remove them,
+still works with spaces though (the wrapper includes a sanitize function)
 xpeke = w.get_summoner(name='fnaticxmid')
 print(xpeke)
 
