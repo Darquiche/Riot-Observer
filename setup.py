@@ -1,29 +1,31 @@
-from setuptools import setup
-import os.path
+# -*- coding: utf-8 -*-
+from setuptools import setup, find_packages
 
-__version__ = '1.3.2'
-
-descr_file = os.path.join(os.path.dirname(__file__), 'README.rst')
+from riot_observer import *
 
 setup(
-    name='riotwatcher',
-    version=__version__,
-    
-    packages=['riotwatcher'],
-
-    description='RiotWatcher is a thin wrapper on top of the Riot Games API for League of Legends.',
-    long_description=open(descr_file).read(),
-    author='AG Stephan',
-    url='https://github.com/pseudonym117/Riot-Watcher',
+    name='riot_observer',
+    version=observer.__version__,
+    packages=find_packages(),
+    author="Darqi",
+    description="Python light wrapper for the Riot Games API for League of Legends",
+    long_description=open('README.md').read(),
+    include_package_data=True,
+    url='https://github.com/Darquiche/Riot-Observer',
     classifiers=[
-        'License :: OSI Approved :: MIT License',
+        "Programming Language :: Python",
+        "Development Status :: 4 - Beta",
+        "License :: OSI Approved :: MIT License",
+        "Natural Language :: English",
+        "Operating System :: OS Independent",
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: Text Processing',
         'Topic :: Games/Entertainment :: Real Time Strategy',
         'Topic :: Games/Entertainment :: Role-Playing'
     ],
     license='MIT',
+    keywords='league of legends riot games api wrapper development python',
     install_requires=[
         'requests'
-    ],
- )
+    ]
+)
